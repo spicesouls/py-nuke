@@ -24,9 +24,20 @@ banner = """\u001b[38;5;240m
 
 
 
+
+
+
+
 def main():
   print(banner)
+  time.sleep(1)
+  firstchoice = input("""
+V1.0
+\u001b[0m\u001b[7m[1]\u001b[0m Nuke a file
+\u001b[0m\u001b[7m[2]\u001b[0m Nuke a folder
+\u001b[1m[CNTRL + C TO EXIT]\u001b[0m
 
+-¬=> """)
 
 
 main()
