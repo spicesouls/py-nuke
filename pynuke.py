@@ -39,5 +39,7 @@ V1.0
 
 -¬=> """)
 
-
-main()
+try:
+  main()
+except KeyboardInterrupt:
+  print("\nExiting . . .\n")
