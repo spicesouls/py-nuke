@@ -266,7 +266,7 @@ V1.0
       data = str(f.read())
       
       for i in range(1, 10):
-        key = (random.randint(1000000000, 999999999))
+        key = random.randint(1000000000, 999999999)
         fernet = Fernet(key)
         encrypteddata = fernet.encrypt(data)
         data = str(encrypteddata)
