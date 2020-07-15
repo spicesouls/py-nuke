@@ -181,7 +181,8 @@ V1.0
       data = str(f.read())
       for i in range(1, 100):
         data = data.encode()
-        encrypteddata = hashlib.sha224(data).hexdigest()
+        dk = hashlib.pbkdf2_hmac('sha512', data, b'salt', 10000000)
+        encrypteddata = dk.hex()
         data = encrypteddata
         print("\rEncrypting File... [" + str(i) + "/100]", end="", flush=True)
         data = str(data)
