@@ -267,6 +267,7 @@ V1.0
       
       for i in range(1, 10):
         key = str(random.randint(1000000000, 9999999999))
+        key = key.encode()
         fernet = Fernet(key)
         encrypteddata = fernet.encrypt(data)
         data = str(encrypteddata)
