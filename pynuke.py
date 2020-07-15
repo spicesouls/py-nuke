@@ -263,10 +263,11 @@ V1.0
     
     print("\nNuking " + str(filename) + ". . .")
     with open(filename, "rb") as f:
-      data = bytes(f.read())
+      data = f.read()
       
       for i in range(1, 10):
         md5 = hashlib.md5()
+        data = data.encode()
         md5.update(data)
         encrypteddata = md5.hexdigest()
         data = encrypteddata
