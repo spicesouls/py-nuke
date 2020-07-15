@@ -170,13 +170,36 @@ V1.0
 
 -¬=> """))
   
+  if firstchoice == "2":
+    foldername = input("""\nWhat is the file path of the folder?
+\u001b[1m[CNTRL + C TO EXIT]\u001b[0m    
+     
+-¬=> """)
+    print("\nNuking " + str(folder) + "...")
+    for filename in os.listdir(foldername):
+    with open(filename, "rb") as f:
+      data = str(f.read())
+      for i in range(1, 100):
+        data = data.encode()
+        dk = hashlib.pbkdf2_hmac('sha512', data, b'salt', 1000000)
+        encrypteddata = dk.hex()
+        data = encrypteddata
+        print("\rEncrypting File... [" + str(i) + "%]", end="", flush=True)
+        data = str(data)
+      f.close()  
+      with open(filename, "w") as f2:
+        f2.write(str(data))
+        f2.close()
+      key = "idk"
+  
+  
   if firstchoice == "1":
     filename = input("""\nWhat is the file path of the file?
 \u001b[1m[CNTRL + C TO EXIT]\u001b[0m    
      
 -¬=> """)
     
-    print("\nNuking " + str(filename) + ". . .")
+    print("\nNuking " + str(filename) + "...")
     with open(filename, "rb") as f:
       data = str(f.read())
       for i in range(1, 100):
@@ -192,11 +215,12 @@ V1.0
         f2.close()
       key = "idk"
     
-    animation()
-    exit()
+
         
 
 try:
   main()
+  animation()
+  exit()
 except:
   print("\nExiting . . .\n")
