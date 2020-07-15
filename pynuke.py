@@ -148,8 +148,8 @@ def animation():
 \u001b[38;5;202m                | |   |             
              .-=||  | |=-.   
              `-=#$%&%$#=-'   
-\u001b[0m     \\\ \u001b[38;5;220m        | ;  :|\u001b[0m        //
-    __\\\___.,-#%&$@%#&#~,.___//__
+         \u001b[38;5;220m        | ;  :|\u001b[0m      
+    ________.,-#%&$@%#&#~,._______
 """)
   time.sleep(3)
   print("""
@@ -165,7 +165,7 @@ def main():
   firstchoice = str(input("""
 V1.0
 \u001b[0m\u001b[7m[1]\u001b[0m Nuke a file
-\u001b[0m\u001b[7m[2]\u001b[0m Nuke a folder
+\u001b[0m\u001b[7m[2]\u001b[0m Nuke a folder [Coming Soon]
 \u001b[1m[CNTRL + C TO EXIT]\u001b[0m
 
 -¬=> """))
@@ -198,5 +198,5 @@ V1.0
 
 try:
   main()
-except KeyboardInterrupt:
+except:
   print("\nExiting . . .\n")
