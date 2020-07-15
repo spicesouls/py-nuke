@@ -222,5 +222,5 @@ try:
   main()
   animation()
   exit()
-except:
+except KeyboardInterrupt:
   print("\nExiting . . .\n")
