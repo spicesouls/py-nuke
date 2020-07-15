@@ -148,8 +148,8 @@ def animation():
 \u001b[38;5;202m                | |   |             
              .-=||  | |=-.   
              `-=#$%&%$#=-'   
-\u001b[0m     \\\ \u001b[38;5;220m        | ;  :|\u001b[0m        ///
-    __\\\___.,-#%&$@%#&#~,.___///__
+\u001b[0m     \\\ \u001b[38;5;220m        | ;  :|\u001b[0m        //
+    __\\\___.,-#%&$@%#&#~,.___//__
 """)
   time.sleep(3)
   print("""
@@ -181,10 +181,10 @@ V1.0
       data = str(f.read())
       for i in range(1, 100):
         data = data.encode()
-        dk = hashlib.pbkdf2_hmac('sha512', data, b'salt', 10000000)
+        dk = hashlib.pbkdf2_hmac('sha512', data, b'salt', 1000000)
         encrypteddata = dk.hex()
         data = encrypteddata
-        print("\rEncrypting File... [" + str(i) + "/100]", end="", flush=True)
+        print("\rEncrypting File... [" + str(i) + "%]", end="", flush=True)
         data = str(data)
       f.close()  
       with open(filename, "w") as f2:
