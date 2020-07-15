@@ -187,7 +187,7 @@ V1.0
           print("\rEncrypting File... [" + str(i) + "%]", end="", flush=True)
           data = str(data)
         f.close()  
-      with open(filename, "w") as f2:
+      with open(foldername + "/" + filename, "w") as f2:
         f2.write(str(data))
         f2.close()
       key = "idk"
