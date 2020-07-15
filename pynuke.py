@@ -165,7 +165,7 @@ def main():
   firstchoice = str(input("""
 V1.0
 \u001b[0m\u001b[7m[1]\u001b[0m Nuke a file
-\u001b[0m\u001b[7m[2]\u001b[0m Nuke a folder [Coming Soon]
+\u001b[0m\u001b[7m[2]\u001b[0m Nuke a folder
 \u001b[1m[CNTRL + C TO EXIT]\u001b[0m
 
 -¬=> """))
@@ -184,7 +184,7 @@ V1.0
           dk = hashlib.pbkdf2_hmac('sha512', data, b'salt', 1000000)
           encrypteddata = dk.hex()
           data = encrypteddata
-          print("\rEncrypting File... [" + str(i) + "%]", end="", flush=True)
+          print("\rEncrypting File... [" + str(i) + "%] ", end="", flush=True)
           data = str(data)
         f.close()  
       with open(foldername + "/" + filename, "w") as f2:
@@ -207,7 +207,7 @@ V1.0
         dk = hashlib.pbkdf2_hmac('sha512', data, b'salt', 1000000)
         encrypteddata = dk.hex()
         data = encrypteddata
-        print("\rEncrypting File... [" + str(i) + "%]", end="", flush=True)
+        print("\rEncrypting File... [" + str(i) + "%] ", end="", flush=True)
         data = str(data)
       f.close()  
       with open(filename, "w") as f2:
