@@ -265,16 +265,19 @@ V1.0
     with open(filename, "rb") as f:
       data = str(f.read())
       
-      for i in range(1, 10):
+      for i in range(1, 100):
         md5 = hashlib.md5()
         data = data.encode()
         md5.update(data)
-        encrypteddata = md5.hexdigest()
+        encrypteddata = md5.digest()
         data = encrypteddata
+        print("\rEncrypting File... [" + str(i) + "/100]", end="", flush=True)
+        time.sleep(0.4)
       f.close()  
       with open(filename, "w") as f2:
         f2.write(str(data))
         f2.close()
+      key = "idk"
     
     animation()
     exit()
