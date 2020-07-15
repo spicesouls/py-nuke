@@ -3,4 +3,4 @@ Want to get rid of a file? But without destroying it completely? Why not use PyN
 
 Be cautious with this tool and don't nuke anything you'd want to keep readable/useable ;)
 
-![Banner Of Py-Nuke](pynuke.png)
+![Banner Of Py-Nuke](pynuke.PNG)
