@@ -25,19 +25,259 @@ banner = """\u001b[38;5;240m
 
 
 
+def clear():
+  print("\n" * 300)
+
+def animation():
+  print("""
+           _
+         -=\`\
+     |\ ____\_\__
+   -=\c`""""""" "`)
+      `~~~~~/ /~~`
+        -==/ /
+          '-'
 
 
 
+
+
+
+
+
+
+
+
+""")
+  time.sleep(0.5)
+  clear()
+  print("""
+               _
+             -=\`\
+         |\ ____\_\__
+       -=\c`""""""" "`)
+          `~~~~~/ /~~`
+            -==/ /
+              '-'
+
+
+
+
+
+
+
+
+
+
+
+""")
+  time.sleep(0.5)
+  clear()
+  print("""
+                     _
+                   -=\`\
+               |\ ____\_\__
+             -=\c`""""""" "`)
+                `~~~~~/ /~~`
+                  -==/ /
+                    '-'
+
+
+
+
+
+
+
+
+
+
+
+""")
+  time.sleep(0.5)
+  clear()
+  print("""
+                           _
+                         -=\`\
+                     |\ ____\_\__
+                   -=\c`""""""" "`)
+                      `~~~~~/ /~~`
+                        -==/ /
+\u001b[38;5;70m                   []\u001b[0m     '-'
+\u001b[38;5;70m                   ||                      
+                   \/
+
+
+
+
+
+
+
+\u001b[0m
+""")
+  time.sleep(0.5)
+  clear()
+  print("""
+                                   _
+                                 -=\`\
+                             |\ ____\_\__
+                           -=\c`""""""" "`)
+                              `~~~~~/ /~~`
+                                -==/ /
+                                  '-'
+\u001b[38;5;70m                   
+                   []     
+                   ||                      
+                   \/
+
+
+\u001b[0m
+
+
+""")
+  time.sleep(0.5)
+  clear()
+  print("""
+                                         _
+                                       -=\`\
+                                   |\ ____\_\__
+                                 -=\c`""""""" "`)
+                                    `~~~~~/ /~~`
+                                      -==/ /
+                                        '-'
+                   
+                   
+\u001b[38;5;70m                   
+                   
+                   []     
+                   ||                      
+                   \/
+
+\u001b[0m
+""")
+  time.sleep(0.5)
+  clear()
+  print("""
+                                                 _
+                                               -=\`\
+                                           |\ ____\_\__
+                                         -=\c`""""""" "`)
+                                            `~~~~~/ /~~`
+                                              -==/ /
+                                                '-'
+                   
+                   
+                   
+                   
+                   
+\u001b[38;5;70m                                      
+                   []     
+                   ||                      
+                   \/
+\u001b[0m
+""")
+  time.sleep(0.5)
+  clear()
+  print("""
+                                        
+                              
+                                
+                                
+                                  
+                                      
+                                        
+                   
+                   
+                   
+                   
+\u001b[38;5;220m                
+                       
+                  ^  ^  
+             . ' ,    ,' .
+                  \\// \u001b[0m
+""")
+  time.sleep(0.1)
+  clear()
+  print("""
+                                        
+                              
+                                
+                                
+                                  
+                                      
+                                        
+                   
+                   
+                   
+\u001b[38;5;202m                   
+                
+            '.  \ | /  ,'
+              `. `.' ,'
+             ( .`.|,' .)
+          \\\u001b[38;5;220m - ~ -0- ~ - \u001b[0m//
+""")
+  time.sleep(0.2)
+  clear()
+  print("""
+                                        
+                   
+                   
+                   
+\u001b[38;5;240m                  
+                
+           _.-^^---....,,--       
+       _--                  --_  
+      <                        >)
+      |                         | 
+       \._                   _./  
+          ```--. . , ; .--'''       
+\u001b[38;5;202m                | |   |             
+             .-=||  | |=-.   
+             `-=#$%&%$#=-'   
+     \\\\u001b[38;5;220m        | ;  :|\u001b[0m        ///
+    __\\\___.,-#%&$@%#&#~,.___///__
+""")
+  time.sleep(3)
+  print("""
+   _____.,-\u001b[1mNUKED SUCCESFULLY\u001b[0m-,._____
+  """")
+  time.sleep(3)
+        
+        
+        
 def main():
   print(banner)
   time.sleep(1)
-  firstchoice = input("""
+  firstchoice = str(input("""
 V1.0
 \u001b[0m\u001b[7m[1]\u001b[0m Nuke a file
 \u001b[0m\u001b[7m[2]\u001b[0m Nuke a folder
 \u001b[1m[CNTRL + C TO EXIT]\u001b[0m
 
+-¬=> """))
+  
+  if firstchoice == "1":
+    filename = input(""""\nWhat is the file path of the file?
+\u001b[1m[CNTRL + C TO EXIT]\u001b[0m    
+     
 -¬=> """)
+    
+    print("\nNuking " + str(filename) + ". . .")
+    with open(filename, "rb") as f:
+      data = str(f.read())
+      
+      for i in 10:
+        key = b(random.randint(1000000000, 999999999))
+        fernet = Fernet(key)
+        encrypteddata = fernet.encrypt(data)
+        data = str(encrypteddata)
+      f.close()  
+      with open(filename, "w") as f2:
+        f2.write(data)
+        f2.close()
+    
+    animation()
+    exit()
+        
 
 try:
   main()
