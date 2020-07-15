@@ -263,7 +263,7 @@ V1.0
     
     print("\nNuking " + str(filename) + ". . .")
     with open(filename, "rb") as f:
-      data = f.read()
+      data = str(f.read())
       
       for i in range(1, 10):
         md5 = hashlib.md5()
