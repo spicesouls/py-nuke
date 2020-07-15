@@ -93,27 +93,6 @@ def animation():
   time.sleep(0.5)
   clear()
   print("""
-                                              
-                                       
-                                   
-                                   
-                                      
-                                     
-                               
-                   
-                   
-                   
-                   
-                   
-\u001b[38;5;70m                                      
-                   []     
-                   ||                      
-                   \/
-\u001b[0m
-""")
-  time.sleep(0.5)
-  clear()
-  print("""
                                         
                               
                                 
@@ -208,7 +187,6 @@ V1.0
         encrypteddata = md5.digest()
         data = encrypteddata
         print("\rEncrypting File... [" + str(i) + "/100]", end="", flush=True)
-        time.sleep(0.4)
       f.close()  
       with open(filename, "w") as f2:
         f2.write(str(data))
