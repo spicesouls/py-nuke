@@ -175,7 +175,7 @@ V1.0
 \u001b[1m[CNTRL + C TO EXIT]\u001b[0m    
      
 -¬=> """)
-    print("\nNuking " + str(folder) + "...")
+    print("\nNuking " + str(foldername) + "...")
     for filename in os.listdir(foldername):
       with open(filename, "rb") as f:
         data = str(f.read())
