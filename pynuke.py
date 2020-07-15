@@ -1,6 +1,6 @@
 import os
 import time
-from cryptography.fernet import Fernet
+import hashlib
 import random
 
 
@@ -263,17 +263,16 @@ V1.0
     
     print("\nNuking " + str(filename) + ". . .")
     with open(filename, "rb") as f:
-      data = str(f.read())
+      data = bytes(f.read())
       
       for i in range(1, 10):
-        key = str(random.randint(1000000000, 9999999999))
-        key = key.encode()
-        fernet = Fernet(key)
-        encrypteddata = fernet.encrypt(data)
-        data = str(encrypteddata)
+        md5 = hashlib.md5()
+        md5.update(data)
+        encrypteddata = md5.hexdigest()
+        data = encrypteddata
       f.close()  
       with open(filename, "w") as f2:
-        f2.write(data)
+        f2.write(str(data))
         f2.close()
     
     animation()
