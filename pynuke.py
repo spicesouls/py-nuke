@@ -178,15 +178,13 @@ V1.0
     
     print("\nNuking " + str(filename) + ". . .")
     with open(filename, "rb") as f:
-      
+      data = str(f.read())
       for i in range(1, 100):
-        md5 = hashlib.md5()
-        data = str(f.read())
         data = data.encode()
-        md5.update(data)
-        encrypteddata = md5.digest()
+        encrypteddata = hashlib.sha224(data).hexdigest()
         data = encrypteddata
         print("\rEncrypting File... [" + str(i) + "/100]", end="", flush=True)
+        data = str(data)
       f.close()  
       with open(filename, "w") as f2:
         f2.write(str(data))
