@@ -174,7 +174,7 @@ def animation():
 """)
   time.sleep(3)
   print("""
-   _____.,-\u001b[1mNUKED SUCCESFULLY\u001b[0m-,._____
+\u001b[1mNUKED SUCCESFULLY\u001b[0m
   """)
   time.sleep(3)
         
