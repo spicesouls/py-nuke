@@ -177,7 +177,7 @@ V1.0
 -¬=> """)
     print("\nNuking " + str(foldername) + "...")
     for filename in os.listdir(foldername):
-      with open(foldername + filename, "rb") as f:
+      with open(foldername + "/" + filename, "rb") as f:
         data = str(f.read())
         for i in range(1, 100):
           data = data.encode()
