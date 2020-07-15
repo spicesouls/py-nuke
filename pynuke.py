@@ -256,7 +256,7 @@ V1.0
 -¬=> """))
   
   if firstchoice == "1":
-    filename = input(""""\nWhat is the file path of the file?
+    filename = input("""\nWhat is the file path of the file?
 \u001b[1m[CNTRL + C TO EXIT]\u001b[0m    
      
 -¬=> """)
@@ -265,7 +265,7 @@ V1.0
     with open(filename, "rb") as f:
       data = str(f.read())
       
-      for i in 10:
+      for i in range(1, 10):
         key = b(random.randint(1000000000, 999999999))
         fernet = Fernet(key)
         encrypteddata = fernet.encrypt(data)
