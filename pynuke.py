@@ -172,7 +172,7 @@ V1.0
   
   if firstchoice == "2":
     foldername = input("""\nWhat is the file path of the folder?
-\u001b[1m[CNTRL + C TO EXIT]\u001b[0m    
+\u001b[1m( /home/spicesouls/secretfolder )\u001b[0m    
      
 -¬=> """)
     print("\nNuking " + str(foldername) + "...")
@@ -195,7 +195,7 @@ V1.0
   
   if firstchoice == "1":
     filename = input("""\nWhat is the file path of the file?
-\u001b[1m[CNTRL + C TO EXIT]\u001b[0m    
+\u001b[1m( /home/spicesouls/abc/logs.txt )\u001b[0m    
      
 -¬=> """)
     
